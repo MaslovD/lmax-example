@@ -17,6 +17,7 @@ public class GoodbyeEvent implements Event {
 
     @Override
     public int getType() {
+
         return EventType.GOODBYE.getCode();
     }
 }
