@@ -19,7 +19,10 @@ public class AlohaEventHandler implements EventHandler<EventWrapper> {
                             (HelloEvent) event.getEvent()).getName())
             );
         } else if (event.getType() == EventType.GOODBYE.getCode()) {
-            System.out.println(String.format("Aloha, %s!", ((GoodbyeEvent) event.getEvent()).getName()));
+            System.out.println(String.format(
+                    "Aloha, %s!", (
+                            (GoodbyeEvent) event.getEvent()).getName())
+            );
         }
     }
 }
