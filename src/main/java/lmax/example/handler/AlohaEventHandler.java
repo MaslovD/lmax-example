@@ -14,7 +14,10 @@ public class AlohaEventHandler implements EventHandler<EventWrapper> {
     @Override
     public void onEvent(EventWrapper event, long sequence, boolean endOfBatch) throws Exception {
         if (event.getType() == EventType.HELLO.getCode()) {
-            System.out.println(String.format("Aloha, %s!", ((HelloEvent) event.getEvent()).getName()));
+            System.out.println(String.format(
+                    "Aloha, %s!", (
+                            (HelloEvent) event.getEvent()).getName())
+            );
         } else if (event.getType() == EventType.GOODBYE.getCode()) {
             System.out.println(String.format("Aloha, %s!", ((GoodbyeEvent) event.getEvent()).getName()));
         }
