@@ -13,7 +13,9 @@ public class GoodbyeEventHandler implements EventHandler<EventWrapper> {
     @Override
     public void onEvent(EventWrapper event, long sequence, boolean endOfBatch) throws Exception {
         if (event.getType() == EventType.GOODBYE.getCode()) {
-            System.out.println(String.format("Goodbye, %s!", ((GoodbyeEvent) event.getEvent()).getName()));
+            System.out.println(String.format("Goodbye, %s!", (
+                    (GoodbyeEvent) event.getEvent()).getName())
+            );
         }
     }
 }
