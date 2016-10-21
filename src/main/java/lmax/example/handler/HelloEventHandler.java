@@ -14,6 +14,7 @@ public class HelloEventHandler implements EventHandler<EventWrapper> {
     public void onEvent(EventWrapper event, long sequence, boolean endOfBatch) throws Exception {
         if (event.getType() == EventType.HELLO.getCode()) {
             System.out.println(String.format("Hello, %s!", ((HelloEvent) event.getEvent()).getName()));
+
         }
     }
 }
